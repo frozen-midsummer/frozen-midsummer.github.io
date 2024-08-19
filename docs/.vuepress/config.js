@@ -1,0 +1,47 @@
+import { viteBundler } from '@vuepress/bundler-vite'
+import { defaultTheme } from '@vuepress/theme-default'
+import { defineUserConfig } from 'vuepress'
+// import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { searchPlugin } from '@vuepress/plugin-search'
+
+export default defineUserConfig({
+  base: "/",
+  title: 'Notes Established 2024',
+  description: '个人建站记录',
+  bundler: viteBundler(),
+  theme: defaultTheme({
+    // 默认主题配置
+    navbar: [
+      {
+        text: '首页',
+        link: '/',
+      },],
+    // 侧边栏对象
+    // 不同子路径下的页面会使用不同的侧边栏
+    sidebar: {
+      '/': [
+        {
+          text: '学习笔记',
+          // 相对路径会自动追加子路径前缀
+          children: [
+            {
+              text: 'DDD Learning',
+              link: '/dddlearning/领域驱动设计'
+            },
+            {
+              text: 'Github Pages',
+              link: '/githubpages/'
+            }
+          ],
+        },
+      ],
+      '/dddlearning/领域驱动设计': 'heading',
+      '/githubpages/': 'heading',
+    },
+  }),
+  plugins: [
+    searchPlugin({
+      // 配置项
+    }),
+  ],
+})
