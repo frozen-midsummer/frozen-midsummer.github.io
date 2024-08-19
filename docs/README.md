@@ -2,19 +2,21 @@
 
 采用 VuePress2.0.0 + Github Pages 搭建的个人笔记网站，以在不同的地点在线编辑/查阅笔记。
 
-## 学习笔记
+## 快速开始
 
-### VuePress 笔记
+```
+1. git clone 下载代码
+2. pnpm install (若没安装 pnpm 先 npm install -g pnpm)
+```
+## 文档地址
+
+### VuePress 文档
 
 [VuePress中文文档地址](https://vuepress.vuejs.org/zh/)
 
 [GitHub Pages 部署](/githubpages/README.md)
 
-### DDD 笔记
-
-[DDD 领域驱动设计](/dddlearning/领域驱动设计.md)
-
-### Markdown 笔记
+### Markdown 文档
 
 [Markdown官方教程](https://markdown.com.cn/)
 
