@@ -6,6 +6,8 @@ import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   base: "/",
+  // 网站 logo 配置，使用.vuepress/public 文件夹下的静态资源
+  head: [['link', { rel: 'icon', href: '/images/1f605.png' }]],
   title: 'Notes Established 2024',
   description: '个人建站记录',
   bundler: viteBundler(),
