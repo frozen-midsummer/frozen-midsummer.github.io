@@ -4,9 +4,11 @@
 
 ## 快速开始
 
-```
-1. git clone 下载代码
-2. pnpm install (若没安装 pnpm 先 npm install -g pnpm)
+```bash
+##  下载代码
+git clone
+##  安装依赖（若没安装 pnpm 先 npm install -g pnpm）
+pnpm install
 ```
 ## 文档地址
 
