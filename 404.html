@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.15" />
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+
+      html.dark {
+        --c-bg: #22272e;
+      }
+
+      html,
+      body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.classList.toggle('dark', true)
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <link rel="icon" href="/images/1f605.png"><title>Notes Established 2024</title><meta name="description" content="个人建站记录">
+    <link rel="preload" href="/assets/style-DWZiNfl0.css" as="style"><link rel="stylesheet" href="/assets/style-DWZiNfl0.css">
+    <link rel="modulepreload" href="/assets/app-C2EH2HQV.js"><link rel="modulepreload" href="/assets/404.html-CVUmtMIW.js">
+    <link rel="prefetch" href="/assets/index.html-C2r0Y5P9.js" as="script"><link rel="prefetch" href="/assets/index.html-CUqo4IZo.js" as="script"><link rel="prefetch" href="/assets/领域驱动设计.html-0gOvuv79.js" as="script"><link rel="prefetch" href="/assets/index.html-DLKBb3yw.js" as="script"><link rel="prefetch" href="/assets/index.html-DgU7mqLR.js" as="script"><link rel="prefetch" href="/assets/index.html-Eo0x6oGc.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" data-v-59f1623a><main class="page" data-v-59f1623a><div class="theme-default-content" data-v-59f1623a><h1 data-v-59f1623a>404</h1><blockquote data-v-59f1623a>How did we get here?</blockquote><a class="route-link" href="/" data-v-59f1623a>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-C2EH2HQV.js" defer></script>
+  </body>
+</html>
