@@ -54,7 +54,7 @@ export default defineUserConfig({
           children: [
             {
               text: "Mapstruct",
-              link: "/projectexprience/mapstruct",
+              link: "/projectexperience/mapstruct",
             },
           ],
         },
