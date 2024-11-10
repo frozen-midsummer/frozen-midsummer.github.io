@@ -7,9 +7,9 @@ import { searchPlugin } from "@vuepress/plugin-search";
 export default defineUserConfig({
   base: "/",
   // 网站 logo 配置，使用.vuepress/public 文件夹下的静态资源
-  head: [['link', { rel: 'icon', href: '/images/1f605.png' }]],
-  title: 'Frozen Midsummer',
-  description: '仲夏寒霜',
+  head: [["link", { rel: "icon", href: "/images/1f605.png" }]],
+  title: "Frozen Midsummer",
+  description: "仲夏寒霜",
   bundler: viteBundler(),
   theme: defaultTheme({
     // 默认主题配置
@@ -17,6 +17,10 @@ export default defineUserConfig({
       {
         text: "首页",
         link: "/",
+      },
+      {
+        text: "Github",
+        link: "https://github.com/frozen-midsummer",
       },
     ],
     // 侧边栏对象
@@ -42,6 +46,15 @@ export default defineUserConfig({
             {
               text: "VuePress Learning",
               link: "/vuepresslearning/",
+            },
+          ],
+        },
+        {
+          text: "项目经历",
+          children: [
+            {
+              text: "Mapstruct",
+              link: "/projectexprience/mapstruct/",
             },
           ],
         },
