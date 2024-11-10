@@ -67,6 +67,6 @@ git 连接的远程仓库地址位于.git/config 文件中
 
 [如何使用 SSH 连接到 Github](https://zhuanlan.zhihu.com/p/111344840)
 
-## 3 VS Code 使用技巧
+## 3 VS Code 开发 GitHub page 技巧
 
 [VS Code 自定义 Markdown 粘贴图片的位置](https://blog.csdn.net/LT_admin/article/details/135136872)

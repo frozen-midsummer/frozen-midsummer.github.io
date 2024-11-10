@@ -10,16 +10,19 @@ git clone
 ##  安装依赖（若没安装 pnpm 先 npm install -g pnpm）
 pnpm install
 ```
+
 ## 文档地址
 
 ### VuePress 文档
 
-[VuePress中文文档地址](https://vuepress.vuejs.org/zh/)
+[VuePress 中文文档地址](https://vuepress.vuejs.org/zh/)
+
+[VuePress 首页配置文档地址](https://vuepress.vuejs.org/zh/reference/config.html)
 
 [GitHub Pages 部署](/githubpages/README.md)
 
 ### Markdown 文档
 
-[Markdown官方教程](https://markdown.com.cn/)
+[Markdown 官方教程](https://markdown.com.cn/)
 
-[Markdown基本语法](https://markdown.com.cn/basic-syntax/)
+[Markdown 基本语法](https://markdown.com.cn/basic-syntax/)
