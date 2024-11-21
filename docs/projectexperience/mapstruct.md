@@ -19,6 +19,8 @@ sidebar: heading
 
 ### 1.4 多对一映射
 
+#### 1.4.1 基本多对一映射
+
 其实没啥好写的，问 AI 就行
 
 ```java
@@ -29,7 +31,28 @@ public interface testConvertor{
 }
 ```
 
+#### 1.4.2 服务类传入
+
+```java
+@Mapper(componentModel=SPRING)
+public interface testConvertor{
+    @Mapping(target="name",expression="java(source1.getName()+source2.getName())")
+    Target toTarget(Source1 source1, @Context SourceService);
+}
+```
+
 ### 1.5 before&after Mapping
+
+```java
+@AfterMapping
+default void afterMapping(@MappingTarget Target target, @Context SourceService sourceService){
+    if(target!=null){
+        /**
+         * 映射过程
+         */
+    }
+}
+```
 
 ## 2 项目应用
 
@@ -72,7 +95,7 @@ public interface UtEnumeration<T>{
 ```java
 @RequiredArgsConstructor
 @Getter
-class enum Sp11Enunm implements UtEnumeration<String>{
+class enum Sp11Enunm implements Sp11Enumeration<String>{
     SP11_A("Sp11A","sp11a"),
     SP11_B("Sp11B","sp11b");
     private final String code;
@@ -95,7 +118,7 @@ class enum Sp11Enunm implements UtEnumeration<String>{
 
 @RequiredArgsConstructor
 @Getter
-class enum Ut2Enunm implements UtEnumeration<String>{
+class enum Ut2Enum implements UtEnumeration<String>{
     UT2_A("Ut2A","ut2a"),
     UT2_B("Ut2B","ut2b");
     private final String code;
