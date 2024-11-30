@@ -1,6 +1,7 @@
 ---
 lang: zh-CN
 title: GitHub Pages 部署
+sidebar: heading
 description: GitHub Pages 部署问题
 ---
 

@@ -2,11 +2,12 @@
 lang: zh-CN
 title: 设计模式
 description: design models
+sidebar: "heading"
 ---
 
-## 工厂方法模式
+### 工厂模式
 
-UtEnumeration接口改造为Factory模式(不就是codeOf方法吗)：
+UtEnumeration 接口改造为 Factory 模式(不就是 codeOf 方法吗)：
 
 ```java
 class UtEnumerationFactory implements EnumerationFactory{
@@ -15,4 +16,7 @@ class UtEnumerationFactory implements EnumerationFactory{
 
   }
 }
+
 ```
+
+### [领域驱动设计](/serverside/designmodel/dddlearning/领域驱动设计)

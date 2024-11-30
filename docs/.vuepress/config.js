@@ -32,20 +32,12 @@ export default defineUserConfig({
           // 相对路径会自动追加子路径前缀
           children: [
             {
-              text: "DDD Learning",
-              link: "/dddlearning/领域驱动设计",
+              text: "服务端",
+              link: "/serverside/",
             },
             {
-              text: "Github Pages",
-              link: "/githubpages/",
-            },
-            {
-              text: "Java Learning",
-              link: "/javalearning/",
-            },
-            {
-              text: "VuePress Learning",
-              link: "/vuepresslearning/",
+              text: "网站建设",
+              link: "/websiteconstruction/",
             },
           ],
         },
@@ -59,9 +51,6 @@ export default defineUserConfig({
           ],
         },
       ],
-      "/dddlearning/领域驱动设计": "heading",
-      "/githubpages/": "heading",
-      "/vuepresslearning/": "heading",
     },
   }),
   plugins: [
