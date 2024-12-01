@@ -19,7 +19,7 @@ pnpm install
 
 [VuePress 首页配置文档地址](https://vuepress.vuejs.org/zh/reference/config.html)
 
-[GitHub Pages 部署](/githubpages/README.md)
+[GitHub Pages 部署](/websiteconstruction/githubpages/README.md)
 
 ### Markdown 文档
 
