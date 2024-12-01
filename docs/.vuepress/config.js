@@ -1,7 +1,7 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { slimsearchPlugin } from '@vuepress/plugin-slimsearch'
 //使用 nodejs-jieba 进行分词
 import { cut } from "nodejs-jieba";
 
@@ -55,11 +55,11 @@ export default defineUserConfig({
     },
   }),
   plugins: [
-    searchProPlugin({
+    slimsearchPlugin({
       // 配置选项
       //开启全文搜索
       indexContent: true,
-      indexOptions: {
+      indexLocaleOptions: {
         // 使用 nodejs-jieba 进行分词
         tokenize: (text, fieldName) =>
           fieldName === "id" ? [text] : cut(text, true),
