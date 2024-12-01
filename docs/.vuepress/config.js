@@ -1,8 +1,9 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
-// import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { searchPlugin } from "@vuepress/plugin-search";
+import { searchProPlugin } from "vuepress-plugin-search-pro";
+//使用 nodejs-jieba 进行分词
+import { cut } from "nodejs-jieba";
 
 export default defineUserConfig({
   base: "/",
@@ -54,8 +55,15 @@ export default defineUserConfig({
     },
   }),
   plugins: [
-    searchPlugin({
-      // 配置项
+    searchProPlugin({
+      // 配置选项
+      //开启全文搜索
+      indexContent: true,
+      indexOptions: {
+        // 使用 nodejs-jieba 进行分词
+        tokenize: (text, fieldName) =>
+          fieldName === "id" ? [text] : cut(text, true),
+      },
     }),
   ],
 });

@@ -7,5 +7,7 @@ sidebar:
       link: /websiteconstruction/githubpages/
     - text: VuePress
       link: /websiteconstruction/vuepresslearning/
+    - text: pnpm
+      link: /websiteconstruction/pnpm/
 ---
 
