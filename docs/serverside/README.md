@@ -8,6 +8,8 @@ sidebar:
       link: /serverside/designmodel/
     - text: java
       link: /serverside/javalearning/
+    - text: python
+      link: /serverside/pythonlearning/
 ---
 
 ## 服务端学习笔记
