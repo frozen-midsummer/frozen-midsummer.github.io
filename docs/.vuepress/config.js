@@ -46,8 +46,8 @@ export default defineUserConfig({
           text: "项目经历",
           children: [
             {
-              text: "Mapstruct",
-              link: "/projectexperience/mapstruct",
+              text: "实用工具",
+              link: "/projectexperience/utils/",
             },
           ],
         },
