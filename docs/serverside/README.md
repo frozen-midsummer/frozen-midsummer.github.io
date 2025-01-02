@@ -10,6 +10,10 @@ sidebar:
       link: /serverside/javalearning/
     - text: python
       link: /serverside/pythonlearning/
+    - text: regularexpression
+      link: /serverside/regularexpression/
+    - text: sql
+      link: /serverside/sql/
 ---
 
 ## 服务端学习笔记
