@@ -6,6 +6,6 @@ sidebar:
   /projectexperience/:
     - text: 实用工具
       link: /projectexperience/utils/
-    - text: project2
-      link: /projectexperience/project2/
+    - text: reconstruct-ui
+      link: /projectexperience/reconstruct-ui/
 ---
