@@ -6,6 +6,8 @@ sidebar:
   /serverside/:
     - text: 设计模式
       link: /serverside/designmodel/
+    - text: git
+      link: /serverside/git/
     - text: java
       link: /serverside/javalearning/
     - text: python
