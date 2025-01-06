@@ -11,7 +11,7 @@ sidebar:
     - text: java
       link: /serverside/javalearning/
     - text: python
-      link: /serverside/pythonlearning/
+      link: /serverside/pythonlearning/README1
     - text: regularexpression
       link: /serverside/regularexpression/
     - text: sql
