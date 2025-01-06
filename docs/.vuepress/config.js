@@ -1,7 +1,7 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
-import { slimsearchPlugin } from '@vuepress/plugin-slimsearch'
+import { slimsearchPlugin } from "@vuepress/plugin-slimsearch";
 //使用 nodejs-jieba 进行分词
 import { cut } from "nodejs-jieba";
 
@@ -46,8 +46,12 @@ export default defineUserConfig({
           text: "项目经历",
           children: [
             {
-              text: "实用工具",
+              text: "backend",
               link: "/projectexperience/utils/",
+            },
+            {
+              text: "frontend",
+              link: "/projectexperience/reconstruct-ui/",
             },
           ],
         },

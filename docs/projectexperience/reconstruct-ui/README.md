@@ -22,5 +22,5 @@ sidebar: heading
 [vscode 插件地址](https://marketplace.visualstudio.com/VSCode)
 
 插件：
-- Vue.volar2.2.0 (Vue官方推荐插件)
 
+- Vue.volar2.2.0 (Vue 官方推荐插件)
