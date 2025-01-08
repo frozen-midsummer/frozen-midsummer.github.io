@@ -29,31 +29,36 @@ export default defineUserConfig({
     sidebar: {
       "/": [
         {
-          text: "学习笔记",
-          // 相对路径会自动追加子路径前缀
-          children: [
-            {
-              text: "服务端",
-              link: "/serverside/",
-            },
-            {
-              text: "网站建设",
-              link: "/websiteconstruction/",
-            },
-          ],
+          text: "HTML/CSS",
+          link: "/htmlcss/",
         },
         {
-          text: "项目经历",
-          children: [
-            {
-              text: "backend",
-              link: "/projectexperience/utils/",
-            },
-            {
-              text: "frontend",
-              link: "/projectexperience/reconstruct-ui/",
-            },
-          ],
+          text: "javascript",
+          link: "/javascript/",
+        },
+        {
+          text: "服务端",
+          link: "/serverside/",
+        },
+        {
+          text: "数据库",
+          link: "/database/",
+        },
+        {
+          text: "python",
+          link: "/python/",
+        },
+        {
+          text: "开发工具",
+          link: "/devtools/",
+        },
+        {
+          text: ".Net Framework",
+          link: "/dotnet/",
+        },
+        {
+          text: "网站建设",
+          link: "/websiteconstruction/",
         },
       ],
     },

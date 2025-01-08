@@ -1,11 +1,12 @@
 ---
 lang: zh-CN
-title: reconstruct-ui
 description: 重构客户端为BS模式
 sidebar: heading
 ---
 
-## 1 开发环境
+## 1 项目搭建
+
+### 1.1 文档地址
 
 - vue3.5.13 文档：[vue](https://cn.vuejs.org/)
 - vue-router4.5.0 文档：[vue-router](https://router.vuejs.org/zh/guide/)
@@ -17,10 +18,10 @@ sidebar: heading
 - i18n (language support)
 - Ant Design5.0 [ant design](https://ant-design.antgroup.com/index-cn)
 
-### 1.1 Visual Studio Code
+### 1.2 Visual Studio Code Plugins
 
 [vscode 插件地址](https://marketplace.visualstudio.com/VSCode)
 
 插件：
 
-- Vue.volar2.2.0 (Vue 官方推荐插件)
+- Vue.volar2.2.0 (Vue 官方推荐插件)，不好用，推荐 prettier，教程如下：
