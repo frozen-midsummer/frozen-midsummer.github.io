@@ -14,6 +14,10 @@ git 的四个工作区域：工作目录（Working Directory）、暂存区(Stag
 
 ## Github
 
+### 建立电脑和 github 之间的 ssh 连接
+
+见[网站建设 > Github Pages](/websiteconstruction/githubpages/README.md#_2-github-push-不上去的问题)
+
 ### ssh: connect to host github.com port 22: Connection refused
 
 这个问题是因为使用 ssh 连接 github 时，由于 github.com 的域名被污染（因为科学上网等原因），解决方案如下：
