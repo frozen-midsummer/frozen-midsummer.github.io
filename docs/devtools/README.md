@@ -6,7 +6,9 @@ sidebar:
     - text: git
       link: /devtools/git/
     - text: 小工具
-      link: /devtools/littletools
+      link: /devtools/littletools/
+    - text: pnpm
+      link: /devtools/pnpm/
 ---
 
 ## 0 序

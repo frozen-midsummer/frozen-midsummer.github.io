@@ -71,3 +71,15 @@ git 连接的远程仓库地址位于.git/config 文件中
 ## 3 VS Code 开发 GitHub page 技巧
 
 [VS Code 自定义 Markdown 粘贴图片的位置](https://blog.csdn.net/LT_admin/article/details/135136872)
+
+## 5 F&Q
+
+### 20250106 文件夹下的 README.md 无法在 github bot 上编译出 index.html
+
+问题描述：
+
+docs\serverside\pythonlearning\README.md 无法正常在 github 流水线上编译出 index.html，修改文件名为 README1.md 之后可以正常编译出 README1.html。本地不修改文件名也可正常编译出 index.html
+
+问题原因：不详
+
+解决方案：后续新建目录时为目录下的 index markdown 文件起一个包含语义的文件名（新学的英语，semantic）
