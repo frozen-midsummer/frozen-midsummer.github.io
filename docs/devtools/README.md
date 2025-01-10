@@ -9,6 +9,8 @@ sidebar:
       link: /devtools/littletools/
     - text: pnpm
       link: /devtools/pnpm/
+    - text: maven
+      link: /devtools/maven/
 ---
 
 ## 0 序
