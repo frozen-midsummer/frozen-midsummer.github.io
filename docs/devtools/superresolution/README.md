@@ -1,5 +1,6 @@
 ---
 lang: zh-CN
+title: 图像超分辨率重建
 description: 图像超分辨率重建
 sidebar: heading
 ---
@@ -19,31 +20,47 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
 ## pip镜像源
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-## pip镜像源位置
+## pip镜像源配置文件位置
 C:\Users\jxwang\AppData\Roaming\pip\pip.ini
 # 设置搜索时显示通道地址
 conda config --set show_channel_urls yes
+```
+
+## 环境搭建
+
+```sh
 # 创建虚拟环境
 conda create -n BasicSR python=3.6
-# 遇到问题
-AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK'
-# 解决方案
+```
+
+- 遇到问题
+  `AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK'`
+- 解决方案
+
+```sh
 pip uninstall pyOpenSSL
 pip install pyOpenSSL
 pip install pyOpenSSL --upgrade --可选
+```
+
+```sh
 # 继续创建虚拟环境
 conda create -n BasicSR python=3.6
 # 切换虚拟环境
 conda activate BasicSR
 # 进入项目路径
 cd C:/Users/jxwang/Desktop/superresolution/BasicSR-master
-# 安装requirements.txt
+# 安装 requirements.txt
 pip install -r requirements.txt
-# 报错
-Exception: Building py-lmdb from source on Windows requires the "patch-ng" python module.
-# 安装patch-ng
+```
+
+- 报错`Exception: Building py-lmdb from source on Windows requires the "patch-ng" python module.`
+- 解决方案
+
+```sh
+# 安装 patch-ng
 pip install patch-ng
-# 继续安装requirements.txt
+# 继续安装 requirements.txt
 pip install -r requirements.txt
 ```
 
@@ -58,8 +75,10 @@ pip install -r requirements.txt
 # 安装完成后就可以预测图片了
 cd C:/Users/jxwang/Desktop/superresolution/BasicSR-master/inference
 python inference_swinir.py --input ../datasets/Set1 --patch_size 48 --model_path ../experiments/pretrained_models/SwinIR/001_classicalSR_DF2K_s64w8_SwinIR-M_x4.pth --output ../result/SwinIR_SRX8_DIV2K/Set1
-# CPU预测较慢，使用GPU预测图片
-# 需要安装CUDA cudnn pytorch GPU版，太费事了，文档如下：
 ```
+
+## 使用 GPU 进行预测
+
+CPU 预测较慢，使用 GPU 预测图片。需要安装 CUDA cudnn pytorch-GPU，太费事了，文档如下：
 
 [深度学习环境配置超详细教程](https://blog.csdn.net/m0_63244368/article/details/135070205)
