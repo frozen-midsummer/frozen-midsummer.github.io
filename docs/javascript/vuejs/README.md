@@ -21,6 +21,7 @@ sidebar: heading
 
 - watch 监听对象的属性的时候，需要()=>a.b.c 这样，直接 watch(a.b.c)监听不到
 - watch 想监听对象内部的变化，需要加上{ deep: true }，否则监听不到内部变化
+- watch 侦听到变量变化时，若要基于变量新值进行计算，使用 newVal=>{}，而不是()=>{变量...}，否则无法保证使用的变量是更新后的变量
 
 ## 深入组件
 
@@ -44,60 +45,24 @@ onMonted(()=>{init()})
 
 ### script setup 风格代码组织顺序
 
-```vue
+```js
 <script setup>
 // 1. 导入声明
-import { ref, computed, watch, onMounted, provide } from "vue";
-import MyComponent from "./MyComponent.vue"; // 假设这是另一个组件
-
 // 2. 接收 props 和 emit
-const props = defineProps({
-  initialCount: {
-    type: Number,
-    required: true,
-  },
-});
-
-const emit = defineEmits(["update:initialCount"]);
-
 // 使用hooks
-const hook1 = useHook1();
-
 // 3. 定义响应式状态
-const count = ref(props.initialCount);
-
 // 4. 定义计算属性
-const doubleCount = computed(() => count.value * 2);
-
 // 5. 定义侦听器
-watch(count, (newVal) => {
-  console.log(`count changed to ${newVal}`);
-});
-
 // 6. 定义方法
-function increment() {
-  count.value++;
-  emit("update:initialCount", count.value);
-}
-
 // 7. 定义生命周期钩子
-onMounted(() => {
-  console.log("Component is mounted!");
-});
-
 // 8. 提供/注入 (如果适用)
-provide("count", count);
-
 // 9. 使用插槽 (如果适用)
-
 // 10. 使用 attrs (如果适用)
-</script>
-
-<template>
-  <div>
-    <p>Current count: {{ count }}</p>
-    <button @click="increment">Increment</button>
-    <MyComponent />
-  </div>
-</template>
+<script>
 ```
+
+## 常见问题
+
+### import { watch } from 'less'
+
+相信你看标题就知道这个问题的恶心之处，以及怎么解决了
