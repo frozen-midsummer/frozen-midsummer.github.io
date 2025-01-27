@@ -60,6 +60,10 @@ export default defineUserConfig({
           text: "网站建设",
           link: "/websiteconstruction/",
         },
+        {
+          text: "操作系统",
+          link: "/os/",
+        },
       ],
     },
   }),

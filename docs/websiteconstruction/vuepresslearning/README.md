@@ -26,3 +26,16 @@ sidebar: heading
 默认主题使用 SASS 作为 CSS 预处理器，[参考文档地址](https://ecosystem.vuejs.press/zh/themes/default/styles.html)
 
 用户可以通过 Palette 文件来自定义样式变量，通过 style 文件来添加额外的样式。地址为`.vuepress/styles/palette.scss` 和 `.vuepress/styles/index.scss`
+
+## 3 F&Q
+
+### Cannot find node_modules\nodejs-jieba\build\Release\jieba.node
+
+- 问题描述：本地调试时运行 pnpm install 之后报错：
+  error Error: Cannot find module '.pnpm\nodejs-jieba@0.2.1_encoding@0.1.13\node_modules\nodejs-jieba\build\Release\jieba.node'
+
+- 问题分析：
+  通常是 nodejs-jieba 版本太低了，或者 pnpm install 的时候没有等待 jieba.node 构建结束
+
+- 解决方案：
+  删除 node_modules 目录，pnpm add node-jieba@latest >> pnpm install

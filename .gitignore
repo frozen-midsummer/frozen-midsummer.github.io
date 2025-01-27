@@ -7,3 +7,5 @@ docs/.vuepress/.cache
 docs/.vuepress/dist
 # 隐私文件
 docs/dddimpl
+# pnpm-lock.yaml
+pnpm-lock.yaml
