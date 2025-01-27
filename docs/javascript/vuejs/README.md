@@ -4,7 +4,7 @@ description: vue.js
 sidebar: heading
 ---
 
-## 基础
+## 1 基础
 
 ### 元素的 ref 引用
 
@@ -21,10 +21,10 @@ sidebar: heading
 
 - watch 监听对象的属性的时候，需要()=>a.b.c 这样，直接 watch(a.b.c)监听不到
 - watch 想监听对象内部的变化，需要加上{ deep: true }，否则监听不到内部变化
-- watch 侦听到变量变化时，若要基于变量新值进行计算，使用 newVal=>{}，而不是()=>{变量...}，否则无法保证使用的变量是更新后的变量
 - Vue 会确保在 watch 触发监听器回调函数时，所有的 props 都已经更新到了最新的状态。
+- watch(,,{immediate:true})可以使监听器在监听的变量初始化时立即执行一次，适合于监听懒加载的 drawer、modal 等组件的 open 事件
 
-## 深入组件
+## 2 深入组件
 
 ### 依赖注入
 
@@ -38,7 +38,7 @@ onMonted(()=>{init()})
 
 正确的注入就直接在变量定义之后 provide 就好了，inject 之后默认就是响应式的
 
-## 风格指南
+## 3 风格指南
 
 ### hooks 风格封装
 
@@ -62,7 +62,7 @@ onMonted(()=>{init()})
 <script>
 ```
 
-## 常见问题
+## 4 常见问题
 
 ### import { watch } from 'less'
 
