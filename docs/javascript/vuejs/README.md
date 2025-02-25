@@ -62,6 +62,11 @@ onMonted(()=>{init()})
 <script>
 ```
 
+### 组织项目的注意事项
+
+- 注意从 vue 文件抽象出可以复用的 hooks 的时机
+- 子组件中需要与其他组件共享的数据最好用 computed 计算属性与父组件双向绑定，不然代码很多props和defineExpose会很乱
+
 ## 4 常见问题
 
 ### import { watch } from 'less'
