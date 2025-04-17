@@ -65,7 +65,8 @@ onMonted(()=>{init()})
 ### 组织项目的注意事项
 
 - 注意从 vue 文件抽象出可以复用的 hooks 的时机
-- 子组件中需要与其他组件共享的数据最好用 computed 计算属性与父组件双向绑定，不然代码很多props和defineExpose会很乱
+- 子组件中需要与其他组件共享的数据最好用 computed 计算属性与父组件双向绑定，不然代码很多 props 和 defineExpose 会很乱
+- 使用 Echarts 绘图时注意 chart-container 的宽高问题，在容器宽高渲染完成后渲染（Echart 容器），就不会高度宽度塌陷
 
 ## 4 常见问题
 
