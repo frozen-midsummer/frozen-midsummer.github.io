@@ -20,9 +20,9 @@ less 的优点是支持嵌套，[官网的教程](https://less.bootcss.com/)很�
 
 #### 概念与用法
 
-- block（块）：可以独立使用的 HTML 元素（比如：<nav>），可以不包含 element。
-- element（元素）：依附于 block 的 HTML 元素，无法独立存在（比如：<li>），前面要加上双下划线`__`。
+- block（块）：可以独立使用的 HTML 元素（比如：`<nav>`），可以不包含 element。
+- element（元素）：依附于 block 的 HTML 元素，无法独立存在（比如：`<li>`），前面要加上双下划线`__`。
 - modifier（修饰符）：表示 block 或者 element 的状态和外观，前面要加上双连字符`--`。
 - 用单连字符 - 连接单词，比如：search-form。
 - element 只属于 block，而不是另一个 element。错误写法：`block__element1__element2`，正确写法：`block__element2`。
-- 使用 modifier 时，同时保留不含 modifier 的类名，比如：<a class="menu__link menu__link--active" href="/zh-cn/">主页</a>。
+- 使用 modifier 时，同时保留不含 modifier 的类名，比如：`<a class="menu__link menu__link--active" href="/zh-cn/">`主页`</a>`。
