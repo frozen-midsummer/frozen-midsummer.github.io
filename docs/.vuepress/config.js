@@ -64,6 +64,10 @@ export default defineUserConfig({
           text: "操作系统",
           link: "/os/",
         },
+        {
+          text: "Java面经",
+          link: "/javainterviewexp/",
+        },
       ],
     },
   }),
