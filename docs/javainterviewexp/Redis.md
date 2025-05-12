@@ -420,7 +420,7 @@ struct sdshdr {
 
 **zskiplist** **结构构成：**
 
-<img src="Redis.assets/image-20220523164352906.png" alt="image-20220523164352906" style="zoom: 67%;" />
+<img src="./Redis.assets/image-20220523164352906.png" alt="image-20220523164352906" style="zoom: 67%;" />
 
 1. header：指向跳跃表的头节点，通过它定位到表头节点的时间复杂度为 O(1)。
 
@@ -652,7 +652,7 @@ Redis的**内存淘汰策略的选取并不会影响过期的key的处理**。�
 
 ​		也称快照（snapshotting），按照一定的时间周期策略==把内存的数据以快照的形式保存到硬盘的二进制文件==，对应产生的数据文件为 `dump.rdb`（存放在bin目录下)。通过配置文件中的 save 参数来定义快照的周期。核心函数：**rdbSave（生成 RDB 文件）和 rdbLoad（从文件加载内存）**两个函数。`save`和`bgsave`命令都可以手动触发RDB持久化。
 
-<img src="Redis.assets/image-20211208215514998.png" alt="image-20211208215514998" style="zoom: 67%;" />
+<img src="./Redis.assets/image-20211208215514998.png" alt="image-20211208215514998" style="zoom: 67%;" />
 
 > bgsave 的原理？
 
@@ -701,7 +701,7 @@ Redis的**内存淘汰策略的选取并不会影响过期的key的处理**。�
 
 ​		由于快照方式是在一定间隔时间做一次，所以如果redis意外down掉的话，就会丢失最后一次快照后的所有更改。如果要求数据不能丢失任何修改的话，可以采用aof持久化方式。
 
-<img src="Redis.assets/image-20211208215535544.png" alt="image-20211208215535544" style="zoom:67%;" />
+<img src="./Redis.assets/image-20211208215535544.png" alt="image-20211208215535544" style="zoom:67%;" />
 
 > 为什么 AOF 比 RDB 有更好的持久化性？
 

@@ -1,8 +1,13 @@
-
+---
+lang: zh-CN
+title: Mysql
+description: Mysql
+sidebar: heading
+---
 
 # 一、MySQL基础
 
-<img src="Mysql面试.assets/image-20210808113418955.png" alt="image-20210808113418955" style="zoom: 50%;" />
+<img src="./Mysql面试.assets/image-20210808113418955.png" alt="image-20210808113418955" style="zoom: 50%;" />
 
 ![1709823932590](C:\Users\ZGG\AppData\Roaming\Typora\typora-user-images\1709823932590.png)        buffer_not_empty.wait(lock, []{ return !buffer.empty(); });这句代码是说buffer非空才wait吗
 
@@ -387,7 +392,7 @@ SELECT * FROM table LIMIT 1000 10;  # 第1001条到第1010条数据
 
 ![image-20220318102120106](Mysql.assets/image-20220318102120106.png)
 
-<img src="Mysql.assets/image-20220318102340909.png" alt="image-20220318102340909" style="zoom:80%;" />
+<img src="./Mysql.assets/image-20220318102340909.png" alt="image-20220318102340909" style="zoom:80%;" />
 
 - 建立主键或者唯一索引优化
 
@@ -431,7 +436,7 @@ select * from orders_history where id >= 1000001 limit 100;
 
 ### MySQL基础架构⭐
 
-<img src="Mysql面试.assets/image-20210808113418955.png" alt="image-20210808113418955" style="zoom: 50%;" />
+<img src="./Mysql面试.assets/image-20210808113418955.png" alt="image-20210808113418955" style="zoom: 50%;" />
 
 简单来说 MySQL  主要分为 Server 层和存储引擎层：
 
@@ -592,7 +597,7 @@ MySQL 没有命中缓存，那么就会进入分析器，分析器主要是**用
 
 ### InnoDB索引的后台线程
 
-<img src="Mysql%E9%9D%A2%E8%AF%95.assets/image-20200728110326535.png" alt="image-20200728110326535" style="zoom: 80%;" />
+<img src="./Mysql%E9%9D%A2%E8%AF%95.assets/image-20200728110326535.png" alt="image-20200728110326535" style="zoom: 80%;" />
 
 ---
 
@@ -1198,7 +1203,7 @@ MySQL 先计算 'Peter' 的哈希值，并使用该值寻找对应的记录指�
 
 ​		MySQL 索引的数据结构对经典的 B+ 树进行了优化。在原来 B+ 树的基础上，增加一个指向相邻叶子节点的链表指针，就形成了带有顺序指针的 B+ 树，==提高区间访问的性能==。
 
-<img src="Mysql%E9%9D%A2%E8%AF%95.assets/image-20211130154620441.png" alt="image-20211130154620441" style="zoom:80%;" />
+<img src="./Mysql%E9%9D%A2%E8%AF%95.assets/image-20211130154620441.png" alt="image-20211130154620441" style="zoom:80%;" />
 
 > 操作
 
@@ -1420,7 +1425,7 @@ alter table User add index index2(email(6));  #只取前6位字符作为索引
 
 ​		使用 Explain 命令来查看语句的**执行计划**，MySQL 在执行某个语句之前，会将该语句过一遍查询优化器，之后会拿到对语句的分析，也就是执行计划，其中包含了许多信息。可以通过其中和索引有关的信息来分析是否命中了索引。
 
-<img src="Mysql%E9%9D%A2%E8%AF%95.assets/image-20211201173400761.png" alt="image-20211201173400761" style="zoom: 67%;" />
+<img src="./Mysql%E9%9D%A2%E8%AF%95.assets/image-20211201173400761.png" alt="image-20211201173400761" style="zoom: 67%;" />
 
 | 字段                          | 含义                                                         |
 | ----------------------------- | ------------------------------------------------------------ |
@@ -1458,7 +1463,7 @@ alter table User add index index2(email(6));  #只取前6位字符作为索引
 
 2. ==show profiles==：分析出最近几次执行的 SQL 语句**耗时**情况，可以进一步根据 `Query_ID` 来查看 sql 具体执行步骤；
 
-   <img src="Mysql.assets/image-20220207104104486.png" alt="image-20220207104104486" style="zoom:80%;" />
+   <img src="./Mysql.assets/image-20220207104104486.png" alt="image-20220207104104486" style="zoom:80%;" />
 
 3. ==show processlist==：实时查看 SQL 执行情况。这个没用过。
 
@@ -1815,7 +1820,7 @@ InnoDB 事务日志包括 redo log 和 undo log，redo log 是重做日志，und
 
 ### 为什么日志需要“两二阶段提交”？
 
-<img src="Mysql%E9%9D%A2%E8%AF%95.assets/image-20211210101340550.png" alt="image-20211210101340550" style="zoom:80%;" />
+<img src="./Mysql%E9%9D%A2%E8%AF%95.assets/image-20211210101340550.png" alt="image-20211210101340550" style="zoom:80%;" />
 
 ​		这里不妨用反证法来进行解释。由于 redo log 和 binlog 是两个独立的逻辑，如果不用两阶段提交，要么就是先写完 redo log 再写 binlog，或者采用反过来的顺序。我们看看这两种方式会有什么问题。==用于解决了数据一致性的问题。==
 

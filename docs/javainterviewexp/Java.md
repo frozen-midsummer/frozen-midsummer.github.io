@@ -1,3 +1,10 @@
+---
+lang: zh-CN
+title: Java并发
+description: Java并发
+sidebar: heading
+---
+
 # Java 基础
 
 ## 一、语言特性

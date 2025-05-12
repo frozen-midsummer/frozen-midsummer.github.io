@@ -1,3 +1,10 @@
+---
+lang: zh-CN
+title: JVM
+description: JVM
+sidebar: heading
+---
+
 ## 一、类加载机制
 
 > 概述
@@ -177,7 +184,7 @@
 
 #### ClassLoader类
 
-<img src="JVM.assets/image-20211027194351815.png" alt="image-20211027194351815" style="zoom: 80%;" />
+<img src="./JVM.assets/image-20211027194351815.png" alt="image-20211027194351815" style="zoom: 80%;" />
 
 ​           **是一个抽象类，其后所有的类加载器都继承于ClassLoader（不包括启动类加载器）**。
 
@@ -257,13 +264,13 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
 
 ​        对Java来说，如果一个类已经加载到系统中，通过修改类文件，并无法让系统再来加载并重定义这个类。一个可行实现热替换的方法是灵活运用ClassLoader。（对JVM来说，不同ClassLoader加载的同名类属于不同的类型）
 
-<img src="JVM.assets/image-20211027201812057.png" alt="image-20211027201812057" style="zoom:67%;" />
+<img src="./JVM.assets/image-20211027201812057.png" alt="image-20211027201812057" style="zoom:67%;" />
 
 ---
 
 ## 二、运行时数据区
 
-<img src="JVM.assets/image-20220122172552991.png" alt="image-20220122172552991" style="zoom:50%;" />
+<img src="./JVM.assets/image-20220122172552991.png" alt="image-20220122172552991" style="zoom:50%;" />
 
 线程私有：程序计数器、虚拟机栈、本地方法栈。
 
@@ -445,7 +452,7 @@ Java SPI就是提供这样的一个机制：为某个接口寻找服务实现的
 
 + 在堆中new的对象**几乎**都在Eden区，但是超大对象直接放Old区。 
 
-  <img src="JVM.assets/image-20211021151524441.png" alt="image-20211021151524441" style="zoom: 67%;" />
+  <img src="./JVM.assets/image-20211021151524441.png" alt="image-20211021151524441" style="zoom: 67%;" />
 
 ##### 将年轻代划分出survivor区的作用
 
@@ -530,7 +537,7 @@ public static String createStringBuffer(String s1, String s2) {
 
 + 线程共享，用于存储**已被虚拟机加载**的**类型信息、常量、静态变量、即时编译器编译后的代码缓存**等数据。
 
-  <img src="JVM.assets/image-20211022171722121.png" alt="image-20211022171722121" style="zoom:67%;" />
+  <img src="./JVM.assets/image-20211022171722121.png" alt="image-20211022171722121" style="zoom:67%;" />
 
 + 虽然《Java虚拟机规范》中把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫作“非堆”（Non-Heap），目的是与Java堆区分开来。 
 
@@ -726,7 +733,7 @@ public class Test{
 
 
 
-<img src="JVM.assets/image-20211024212724177.png" alt="image-20211024212724177" style="zoom: 67%;" />
+<img src="./JVM.assets/image-20211024212724177.png" alt="image-20211024212724177" style="zoom: 67%;" />
 
 ---
 
@@ -975,7 +982,7 @@ Major GC触发：**老年代空间不足时，会尝试触发Minor GC。如果�
 
 ### 经典垃圾收集器
 
-<img src="JVM.assets/image-20211025211537396.png" alt="image-20211025211537396" style="zoom: 50%;" />
+<img src="./JVM.assets/image-20211025211537396.png" alt="image-20211025211537396" style="zoom: 50%;" />
 
 + JDK9开始：两根红线的搭配remove了。
 
@@ -984,7 +991,7 @@ Major GC触发：**老年代空间不足时，会尝试触发Minor GC。如果�
 + JDK8默认：Parallel Scavenge + Parallel Old。
 + JDK9开始默认：G1。
 
-<img src="JVM.assets/image-20211026152513219.png" alt="image-20211026152513219" style="zoom: 67%;" />
+<img src="./JVM.assets/image-20211026152513219.png" alt="image-20211026152513219" style="zoom: 67%;" />
 
 #### 查看默认的垃圾回收器
 
@@ -1038,7 +1045,7 @@ Major GC触发：**老年代空间不足时，会尝试触发Minor GC。如果�
 
 + **这是JDK1.8的默认收集器**。
 
-  <img src="JVM.assets/image-20211025193847075.png" alt="image-20211025193847075" style="zoom:67%;" />
+  <img src="./JVM.assets/image-20211025193847075.png" alt="image-20211025193847075" style="zoom:67%;" />
 
 ---
 
@@ -1156,7 +1163,7 @@ G1提供了三种垃圾回收模式：Young GC、Mixed GC、Full GC，在不同�
 + G1的记忆集在存储结构的本质上是一种**哈希表**，Key是别的Region的起始地址，Value是一个集合，里面存储的元素是卡表的索引号。  
 + 一方面这是一种“双向”的卡表结构，更复杂；同时由于Region数量比传统收集器的分代数量明显要多得多，因此G1收集器要比其他的传统垃圾收集器有着更高的**内存占用负担**。 根据经验，G1至少要耗费大约相当于Java堆容量**10%至20%的额外内存**来维持收集器工作。   
 
-<img src="JVM.assets/image-20211026130948391.png" alt="image-20211026130948391" style="zoom: 80%;" />
+<img src="./JVM.assets/image-20211026130948391.png" alt="image-20211026130948391" style="zoom: 80%;" />
 
 ---
 
@@ -1376,7 +1383,7 @@ HotSpot默认采用**混合模式**，综合了**解释执行和即时编译两�
 
 + 类索引和父类索引各自指向一个类型`CONSTANT_Class_info`的类描述符常量，通过`CONSTANT_Class_info`类型的常量中的索引值可以找到定义在`CONSTANT_Utf8_info`类型的常量中的全限定名字符串。     
 
-<img src="JVM.assets/image-20211027092032357.png" alt="image-20211027092032357" style="zoom: 67%;" />
+<img src="./JVM.assets/image-20211027092032357.png" alt="image-20211027092032357" style="zoom: 67%;" />
 
 + 接口索引入口的第一项u2类型的数据为**接口计数器**，表示**索引表的容量**。若该类没有实现任何接口，则计数器值为0，后面接口的索引表不再占用任何字节。   
 
@@ -1446,7 +1453,7 @@ HotSpot默认采用**混合模式**，综合了**解释执行和即时编译两�
 
 > JMM定义了 8 个操作来完成主内存和工作内存的交互操作：
 
-<img src="JVM.assets/image-20211026155825004.png" alt="image-20211026155825004"  />
+<img src="./JVM.assets/image-20211026155825004.png" alt="image-20211026155825004"  />
 
 - lock（锁定）：作用于主内存的变量，它把一个变量标识为一条线程独占的状态。
 - unlock（解锁）：作用于主内存的变量，它把一个处于锁定状态的变量释放出来，释放后的变量才可以被其他线程锁定。
@@ -1678,7 +1685,7 @@ public class UsingRandom{
 
 + -jstat：查看JVM统计信息，语法：`jstat -<option> [-t] [-h<lines>] <vmid> [<interval>] [<count>]`
 
-  <img src="JVM.assets/image-20211028104339782.png" alt="image-20211028104339782" style="zoom:67%;" />
+  <img src="./JVM.assets/image-20211028104339782.png" alt="image-20211028104339782" style="zoom:67%;" />
 
 + -jinfo：实时查看和修改JVM配置参数
 
