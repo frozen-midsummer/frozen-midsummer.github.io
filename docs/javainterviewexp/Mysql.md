@@ -9,8 +9,6 @@ sidebar: heading
 
 <img src="./Mysql面试.assets/image-20210808113418955.png" alt="image-20210808113418955" style="zoom: 50%;" />
 
-![1709823932590](C:\Users\ZGG\AppData\Roaming\Typora\typora-user-images\1709823932590.png)        buffer_not_empty.wait(lock, []{ return !buffer.empty(); });这句代码是说buffer非空才wait吗
-
 ### 数据库的三大范式
 
 + 第一范式：**数据库表中不能出现重复记录，每个字段是原子性的不能再分**。关于第一范式，每一行必须唯一，也就是==每个表必须有主键==，这是我们数据库设计的最基本要求，主要通常采用数值型或定长字符串表示，关于列不可再分，应该根据具体的情况来决定。如联系方式，为了开发上的便利行可能就采用一个字段了。

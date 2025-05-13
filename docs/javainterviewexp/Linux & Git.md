@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
-title: Linux
-description: Linux
+title: Linux & Git
+description: Linux & Git
 sidebar: heading
 ---
 
