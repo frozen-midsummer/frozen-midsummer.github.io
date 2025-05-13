@@ -169,7 +169,7 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 <img src="./%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.assets/image-20211124152959276.png" alt="image-20211124152959276" style="zoom:80%;" />
 
-![image-20220425105010394](./JUC%20&%20操作系统.assets/image-20220425105010394.png)
+![image-20220425105010394](JUC%20&%20操作系统.assets/image-20220425105010394.png)
 
 ![image-20220425105048622](JUC%20&%20操作系统.assets/image-20220425105048622.png)
 
