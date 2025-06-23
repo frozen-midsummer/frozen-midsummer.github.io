@@ -30,4 +30,6 @@ sidebar:
       link: /javainterviewexp/设计模式.md
     - text: 项目
       link: /javainterviewexp/项目.md
+    - text: bg
+      link: /javainterviewexp/hrinterview.md
 ---
