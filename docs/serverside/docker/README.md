@@ -59,3 +59,8 @@ ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: Y
 ```
 
 问题解决：一般是~/mysql/config/my.cnf 配置文件没指定字符集，和系统字符集不匹配
+
+### docker 部署 rocketmq
+
+docker 部署 rocketmq 地址：
+https://rocketmq.apache.org/zh/docs/quickStart/02quickstartWithDocker/
