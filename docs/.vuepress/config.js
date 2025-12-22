@@ -29,6 +29,10 @@ export default defineUserConfig({
     sidebar: {
       "/": [
         {
+          text: "AI",
+          link: "/ai/",
+        },
+        {
           text: "HTML/CSS",
           link: "/htmlcss/",
         },
